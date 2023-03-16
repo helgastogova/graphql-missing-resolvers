@@ -1,0 +1,26 @@
+# .gitignore
+
+# Node.js dependencies
+node_modules
+
+
+# TypeScript build output
+dist
+
+# Development tools
+*.log
+*.lock
+*.pid
+*.seed
+*.swp
+*.swo
+*.bak
+*.tmp
+*.t??
+.DS_Store
+.directory
+.idea
+.vscode
+
+# Operating systems
+Thumbs.db
