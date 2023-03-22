@@ -8,7 +8,8 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "lib": ["ES2019", "DOM"]
+    "lib": ["ES2019", "DOM"],
+    "outDir": "dist",
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
