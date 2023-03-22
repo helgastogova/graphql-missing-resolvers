@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkMissingResolvers = void 0;
 const graphql_1 = require("graphql");
-function checkMissingResolversRecursively(type, path = '') {
+function checkMissingResolversRecursively(type, path = "") {
     const fields = type.getFields();
     Object.keys(fields).forEach((fieldName) => {
         const field = fields[fieldName];
