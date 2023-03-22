@@ -25,7 +25,7 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@graphql-tools/schema": "^9.0.17",
     "@types/graphql": "^14.5.0",
     "@types/node": "*",
@@ -33,6 +33,9 @@
     "graphql": "^16.6.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "graphql": "*"
   },
   "devDependencies": {
     "rimraf": "^4.4.0"
