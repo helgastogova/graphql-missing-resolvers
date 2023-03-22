@@ -13,6 +13,11 @@ or
 pnpm install graphql-missing-resolvers
 ```
 
+or
+```bash
+yarn add graphql-missing-resolvers
+```
+
 ## Usage
 
 1.  Import the `checkMissingResolvers` function from the graphql-missing-resolvers package:
@@ -79,5 +84,27 @@ In this example, the `User.name` field is missing a resolver. When you run your 
 ```rust
 Missing resolver for field: User.name
 ```
+
+
+To use this package, you will need to install both "@graphql-tools/schema" and "graphql" packages as dependencies in your project.
+
+You can install these packages using npm by running the following command in your project directory:
+
+```bash
+npm install @graphql-tools/schema graphql
+```
+
+or
+```bash
+pnpm install @graphql-tools/schema graphql
+```
+
+or
+```bash
+yarn add @graphql-tools/schema graphql
+```
+
+Once these packages are installed, you can import and use this package in your project.
+
 ## License
 MIT
