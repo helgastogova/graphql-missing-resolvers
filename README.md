@@ -38,6 +38,20 @@ checkMissingResolvers(schema);
 ```
 The `checkMissingResolvers` function will analyze your GraphQL schema and log a warning message for each field without a resolver.
 
+You can also pass a boolean `checkNested` parameter to check for missing resolvers in nested object types. By default, `checkNested` is set to false. Here's an example of using the `checkNested` parameter:
+
+```typescript
+import { makeExecutableSchema } from '@graphql-tools/schema';
+import { typeDefs, resolvers } from './schema';
+import { checkMissingResolvers } from 'graphql-missing-resolvers';
+
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+
+checkMissingResolvers(schema, true);
+```
+
+In this example, the checkMissingResolvers function will check for missing resolvers in nested object types.
+
 ## Example
 Consider the following schema and resolvers:
 ```typescript
@@ -65,9 +79,8 @@ export const resolvers = {
     id: (user: any) => user.id,
   },
 };
-
 ```
-Import the checkMissingResolvers function and use it with your schema:
+Import the `checkMissingResolvers` function and use it with your schema:
 
 ```typescript
 // index.ts
@@ -86,9 +99,7 @@ Missing resolver for field: User.name
 ```
 
 
-To use this package, you will need to install both "@graphql-tools/schema" and "graphql" packages as dependencies in your project.
-
-You can install these packages using npm by running the following command in your project directory:
+To use this package, you will need to install both `@graphql-tools/schema` and `graphql` packages as dependencies in your project. You can install these packages using npm by running the following command in your project directory:
 
 ```bash
 npm install @graphql-tools/schema graphql

@@ -6,9 +6,22 @@ import {
 	getNamedType,
 } from "graphql";
 
+export function checkMissingResolvers(schema: GraphQLSchema, checkNested: boolean = false) {
+	const queryType = schema.getQueryType();
+	const mutationType = schema.getMutationType();
+	const subscriptionType = schema.getSubscriptionType();
+
+	[queryType, mutationType, subscriptionType].forEach((type) => {
+		if (type) {
+			checkMissingResolversRecursively(type, "", checkNested);
+		}
+	});
+}
+
 function checkMissingResolversRecursively(
 	type: GraphQLObjectType,
-	path: string = ""
+	path: string = "",
+	checkNested: boolean = false
 ) {
 	const fields = type.getFields();
 
@@ -23,20 +36,8 @@ function checkMissingResolversRecursively(
 
 		const fieldType = getNamedType(field.type);
 
-		if (isObjectType(fieldType)) {
-			checkMissingResolversRecursively(fieldType, newPath);
-		}
-	});
-}
-
-export function checkMissingResolvers(schema: GraphQLSchema) {
-	const queryType = schema.getQueryType();
-	const mutationType = schema.getMutationType();
-	const subscriptionType = schema.getSubscriptionType();
-
-	[queryType, mutationType, subscriptionType].forEach((type) => {
-		if (type) {
-			checkMissingResolversRecursively(type);
+		if (isObjectType(fieldType) && checkNested) {
+			checkMissingResolversRecursively(fieldType, newPath, checkNested);
 		}
 	});
 }
