@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@graphql-tools/schema': ^9.0.17
   '@types/graphql': ^14.5.0
+  '@types/node': '*'
   asn1.js: ^5.0.0
   graphql: ^16.6.0
   rimraf: ^4.4.0
@@ -12,9 +13,10 @@ specifiers:
 dependencies:
   '@graphql-tools/schema': 9.0.17_graphql@16.6.0
   '@types/graphql': 14.5.0
+  '@types/node': 18.15.5
   asn1.js: 5.4.1
   graphql: 16.6.0
-  ts-node: 10.9.1_typescript@5.0.2
+  ts-node: 10.9.1_cac398dc69ef9ba81c05bffba6cf6d5b
   typescript: 5.0.2
 
 devDependencies:
@@ -106,6 +108,10 @@ packages:
     deprecated: This is a stub types definition. graphql provides its own type definitions, so you do not need this installed.
     dependencies:
       graphql: 16.6.0
+    dev: false
+
+  /@types/node/18.15.5:
+    resolution: {integrity: sha512-Ark2WDjjZO7GmvsyFFf81MXuGTA/d6oP38anyxWOL6EREyBKAxKoFHwBhaZxCfLRLpO8JgVXwqOwSwa7jRcjew==}
     dev: false
 
   /acorn-walk/8.2.0:
@@ -223,7 +229,7 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /ts-node/10.9.1_typescript@5.0.2:
+  /ts-node/10.9.1_cac398dc69ef9ba81c05bffba6cf6d5b:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -242,6 +248,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
+      '@types/node': 18.15.5
       acorn: 8.8.2
       acorn-walk: 8.2.0
       arg: 4.1.3
