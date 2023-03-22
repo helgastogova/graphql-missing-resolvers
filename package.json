@@ -1,6 +1,6 @@
 {
   "name": "graphql-missing-resolvers",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A utility to check for missing resolvers in a GraphQL schema",
   "keywords": [
     "graphql",
