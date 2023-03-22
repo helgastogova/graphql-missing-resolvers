@@ -25,19 +25,17 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "peerDependencies": {
-    "@graphql-tools/schema": "^9.0.17",
+  "devDependencies": {
     "@types/graphql": "^14.5.0",
     "@types/node": "*",
-    "asn1.js": "^5.0.0",
     "graphql": "^16.6.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "rimraf": "^4.4.0",
+    "@graphql-tools/schema": "^9.0.17"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@graphql-tools/schema": "^9.0.17",
     "graphql": "*"
-  },
-  "devDependencies": {
-    "rimraf": "^4.4.0"
   }
 }
